@@ -1,0 +1,7 @@
+{
+  "resultCode":"结果 OK/ERROR",
+  "resultMsg":"错误描述",
+  "luckyDrawResult":"nextQuery/queryResult",
+  "interval":"查询间隔 单位秒",
+  "drawType":"draw_X    0特等奖；1 一等奖；2  二等奖；3  三等奖； 4 四等奖； 5 五等奖； 6 六等奖；7 七等奖 8 八等奖 ； 9 九等奖"
+}

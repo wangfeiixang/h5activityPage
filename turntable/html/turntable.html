@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="apple-mobile-web-app-title" content="Ratchet">
+	    <title>转盘抽奖</title>
+	    <link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/turntable.css">
+		<script src="../js/base.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="rightTop">
+				<img id="rule" src="http://f.appstore.zshiliu.com/clubberimg/h5active/rules.png"  />
+			</div>
+			<div class="turntable">
+				<div id="outer-cont">
+					<div id="outer" class="outer">
+						<img id="rotateImg" src="http://f.appstore.zshiliu.com/clubberimg/h5active/turntable.png" />
+					</div>
+				</div>
+				<div id="inner-cont">
+					<div id="inner" class="inner">
+						<div id="rotate"></div>
+						<img class="btnImg" src="http://f.appstore.zshiliu.com/clubberimg/h5active/btn-no.png" />
+						<p>第一期</p>
+					</div>
+				</div>
+			</div>
+			<div class="bottomTxt">
+				<p>10个<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/bamboo.jpg" alt="">可以抽一次，当前持有<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/bamboo.jpg" alt=""><span id="bamboo"></span>个</p>
+			</div>
+		</div>
+		<div class="rulesModal">
+			<div class="rulesBox">
+				<div class="rbContent">
+					<h1>&bull;<span></span>抽奖说明<span></span>&bull;</h1>
+					<div class="flexBox">
+						<span>1.</span>
+						<p>抽奖活动开放时间：2017年12月-2018年1月，共分为六期开放，每一期的具体时间如下：12月11日、21日、31日，1月11日、21日、31日。只有活动开放当日可以抽奖。奖金总额达100万！</p>
+					</div>
+					<div class="flexBox">
+						<span>2.</span>
+						<p>每次参与抽奖需要消耗十根竹签。竹签数量不够无法进行抽奖。竹签可以通过每日签到获得，每天只能获得一根竹签。</p>
+					</div>
+					<div class="flexBox">
+						<span>3.</span>
+						<p>中奖后中奖金额将会在次日发放至用户收益的个人劳务费之中，请注意查收。</p>
+					</div>
+					<div class="flexBox">
+						<span>4.</span>
+						<p>官方严禁在抽奖中的违规行为，如有发现，官方有权对违规账号进行账号封禁、取消领奖资格以及追回奖金等处理。</p>
+					</div>
+					<div class="flexBox">
+						<span>5.</span>
+						<p>本次抽奖活动最终解释权归紫石榴官方所有。</p>
+					</div>
+				</div>
+				<div class="rulesImg">
+					<img id="close" src="http://f.appstore.zshiliu.com/clubberimg/h5active/close.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="prizeModal">
+			<div class="prizeBox">
+				<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/prize.png" alt="" />
+			</div>
+			<div class="prizeInfo">
+				<p class="info_one">恭喜您</p>
+				<p class="info_two">抽中<span class="win">特等奖</span></p>
+				<p class="info_three"><span class="bonus">5000</span></p>
+			</div>
+			<div class="prizeBtn">
+				<img class="returnBtn" src="http://f.appstore.zshiliu.com/clubberimg/h5active/btn-bg.png">
+				<p class="btnInfo btnGet">立即领取</p>
+				<p class="prizeMs">现金奖励将与次日返还至个人收益的<br />劳务费中，请注意查收</p>
+			</div>
+		</div>
+		<div class="missModal">
+			<div class="missBox">
+				<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/miss.png" alt="" />
+			</div>
+			<div class="missInfo">
+				<p class="info_one">很抱歉</p>
+				<p class="info_two">本次未中奖</p>
+			</div>
+			<div class="missBtn">
+				<img class="returnBtn" src="http://f.appstore.zshiliu.com/clubberimg/h5active/btn-bg.png">
+				<p class="btnInfo btnClose">关闭</p>
+			</div>
+		</div>
+		<div class="mask"></div>
+		<div class="maskTwo"></div>
+		<div class="message">
+			<div class="message-box">	
+				<p></p>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.rotate.min.js"></script>
+	<script src="../js/turntable.js"></script>
+</html>

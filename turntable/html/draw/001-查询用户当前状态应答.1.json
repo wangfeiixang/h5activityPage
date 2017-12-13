@@ -1,0 +1,7 @@
+{
+  "resultCode":"结果 OK/ERROR",
+  "resultMsg":"错误描述",
+  "totalBamboos":"总的签到次数  默认值0",
+  "luckyDrawTimes":"抽奖次数 默认值0",
+  "luckyDrawAlready":"上次是否抽奖 Y:上次抽过奖；  N:没有抽过奖"
+}

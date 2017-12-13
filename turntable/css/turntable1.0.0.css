@@ -1,0 +1,355 @@
+/*抽奖页面-- css*/
+html,body{
+	width: 100%;
+	overflow: hidden;
+	background: #fcd839;
+}
+.content {
+    width: 100%;
+    height: 6.4rem;
+    position: relative;
+    background: url('../imgs/bg.jpg') no-repeat top center;
+    background-size: 100% 100%;
+}
+.rightTop {
+	float: right;
+	margin-top: .18rem;
+}
+.rightTop > img {
+	display: block;
+	width: .7rem;
+	height: .26rem;
+	cursor: pointer;
+}
+.outer {
+	display: block;
+	width:3.16rem;
+	position: absolute;
+	top:1.78rem;
+	left:.2rem;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+.outer > img{
+	width: 100%;
+}
+
+/* #rotateImg{
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+} */
+
+
+.inner > img {
+	display: block;
+	width:1.71rem;
+	position: absolute;
+	top:1.77rem;
+	left:.92rem;
+}
+.inner > p {
+	font-weight: bold;
+	font-size: 0.15rem;
+	color: #fff;
+	position: absolute;
+	top:1.81rem;
+	left:1.53rem;
+}
+.bottomTxt > p {
+	font-size: 0.12rem;
+	color: #262626;
+	position: absolute;
+	bottom: 1.04rem;
+	left: .87rem;
+}
+
+.bottomTxt  p img{
+	width: .13rem;
+	margin: 0 2px;
+	vertical-align: -2px;
+}
+
+#bamboo{
+	display: inline-block;
+	vertical-align: 0px; 
+}
+
+#rotate{
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    /* background: gold; */
+    position: absolute;
+    left: 1.42rem;
+    top: 2.98rem;
+    z-index: 999;
+    opacity: .8;
+}
+
+
+/*抽奖说明--弹框*/
+.rulesModal {
+	width:3.33rem;
+	height: 100%;
+	font-size: 0.12rem;
+	z-index: 1000;
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right: 0;
+	margin: auto;
+	margin-top: .63rem;
+	display: none;
+}
+
+.rulesBox{
+	width: 100%;
+	background: #ff5141;
+	color: #fff;
+	border-radius: .2rem;
+}
+.rbContent {
+	margin: .2rem;
+	float: left;
+}
+.rbContent > h1 {
+	text-align: center;
+	color: #fff;
+	margin-bottom: .2rem;
+}
+.rbContent > h1 > span {
+	display:inline-block;
+	width:.1rem;
+}
+.rbContent > .flexBox {
+	display: flex;
+	margin-bottom: .1rem;
+}
+
+.rbContent > .flexBox > span {
+	flex: 0 .2rem;
+	/*display: inline-block;
+	vertical-align: bottom;*/
+	/*margin-top: .013rem;*/
+}
+.rbContent > .flexBox > p {
+	flex: 1;
+}
+.rulesImg {
+	text-align: center;
+}
+.rulesImg > img {
+	width: .54rem;
+	margin-bottom: .14rem;
+}
+.displayNone {
+	display: none;
+}
+
+/*中奖--弹框*/
+.prizeModal {
+	/*width:3.3rem;
+	height: 100%;*/
+	font-size: 0.12rem;
+	z-index: 1000;
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right: 0;
+	margin: auto;
+	margin-top: 36%;
+	display: none;
+}
+.prizeBox {
+	text-align: center;
+	/*position: relative;*/
+}
+.prizeBox > img {
+	width: 3.3rem;
+}
+.prizeInfo > .info_one {
+	font-size: .2rem;
+	color: #ea2a2d;
+	font-weight: bold;
+	position: absolute;
+	top:.59rem;
+	left:1.47rem;
+}
+.prizeInfo > .info_two {
+	font-size: .15rem;
+	color: #ea2a2d;
+	font-weight: bold;
+	position: absolute;
+	top: .85rem;
+	left:1.4rem;
+}
+.prizeInfo > .info_two > span {
+	display: inline-block;
+	vertical-align: top;
+}
+/* .prizeInfo > .info_three {
+	font-size: .4rem;
+	color: #ebb36e;
+	font-weight: bold;
+	position: absolute;
+	top: 1.16rem;
+	left:1.23rem;
+}
+.prizeInfo > .info_three > img {
+	width: .2rem;
+	margin-top: -.15rem;
+} */
+
+.prizeInfo > .info_three {
+	width: 55%;
+	font-size: .3rem;
+	color: #ebb36e;
+	font-weight: bold;
+	position: absolute;
+	top: 1.22rem;
+    left: .84rem;
+	text-align: center;
+}
+/*.prizeInfo  > .yuan {
+	width: .2rem;
+	margin-top: -.15rem;
+	position: absolute;
+	top: 1.28rem;
+	left: 2.29rem;
+}*/
+
+.prizeBtn > img {
+	width: 1.40rem;
+	position: absolute;
+	top: 1.90rem;
+	left:1.09rem;
+}
+.prizeBtn > .btnInfo {
+	font-size: .15rem;
+	font-weight: bold;
+	color: #f03838;
+	position: absolute;
+	top: 1.96rem;
+	left:1.47rem;
+}
+.prizeBtn > .prizeMs {
+	font-size: .1rem;
+	font-weight: bold;
+	color: #fff;
+	position: absolute;
+	top: 2.34rem;
+	left: 1rem; 
+	text-align: center;
+	/* z-index: 999; */
+}
+
+/*未中奖--弹框*/
+.missModal {
+	/* width:100%;
+	height: 100%; */
+	font-size: 0.12rem;
+	z-index: 1000;
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right: 0;
+	margin: auto;
+	margin-top: 45%;
+	display: none;
+}
+
+.missBox {
+	text-align: center;
+	position: relative;
+}
+
+.missBox > img {
+	width: 3.3rem;
+}
+
+.missInfo > .info_one {
+	font-size: .2rem;
+	color: #ea2a2d;
+	font-weight: bold;
+	position: absolute;
+	top:.59rem;
+	left:1.47rem;
+}
+.missInfo > .info_two {
+	font-size:.15rem;
+	color: #ea2a2d;
+	font-weight: bold;
+	position: absolute;
+	top: .89rem;
+	left:1.40rem;
+}
+.missBtn > img {
+	width: 1.4rem;
+	position: absolute;
+	top: 1.60rem;
+	left:1.09rem;
+}
+.missBtn > .btnInfo {
+	font-size: .15rem;
+	font-weight: bold;
+	color: #f03838;
+	position: absolute;
+	top: 1.65rem;
+	left:1.63rem;
+}
+
+/*遮罩层显示*/
+.mask,.maskTwo{
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.6);
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	top:0;
+	display: none;
+}
+
+
+/*错误提示或者网络延时提示*/
+.message{
+	width:100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top:0;
+	color:#fff;
+	z-index: 1001;
+	display: none;
+}
+
+.message-box{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.message p{
+	width: 100%;
+	height: 30px;
+	font-size: .16rem;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	margin: auto;
+}
+
