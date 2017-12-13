@@ -14,6 +14,8 @@ var turntable ={
     describe:null,//记录是否需要轮询
     init:function(){
 
+        
+
         if ( this.num>0 && this.getBamboo>=10  ) {//判断是否抽奖的图片更换
             // console.log('可以抽奖')
             $(".btnImg").attr('src','http://f.appstore.zshiliu.com/clubberimg/h5active/btn.png');
