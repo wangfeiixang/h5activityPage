@@ -11,14 +11,26 @@
 		<link rel="stylesheet" type="text/css" href="../css/turntable.css">
 		<script src="../js/base.js"></script>
 		
+		
 	</head>
 	<body>
 		<div class="content">
+			<div class="leftTop">
+				<img id="record" src="../imgs/btn-left.png"  />
+			</div>
+			<div class="centertop">
+				<p>2017/12/12 - 2018/01/20</p>
+			</div>
 			<div class="rightTop">
-				<img id="rule" src="http://f.appstore.zshiliu.com/clubberimg/h5active/rules.png"  />
+				<img id="rule" src="../imgs/rules.png"  />
 			</div>
 			<div class="turntable">
 				<div id="outer-cont">
+					<div id="prize-list">
+						<ul id="getPrize">
+							
+						</ul>
+					</div>
 					<div id="outer" class="outer">
 						<img id="rotateImg" src="http://f.appstore.zshiliu.com/clubberimg/h5active/turntable.png" />
 					</div>
@@ -35,8 +47,8 @@
 				<p>10个<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/bamboo.jpg" alt="">可以抽一次，当前持有<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/bamboo.jpg" alt=""><span id="bamboo"></span>个</p>
 			</div>
 		</div>
-		<div class="rulesModal">
-			<div class="rulesBox">
+		<div class="rulesModal modal">
+			<div class="rulesBox box">
 				<div class="rbContent">
 					<h1>&bull;<span></span>抽奖说明<span></span>&bull;</h1>
 					<div class="flexBox">
@@ -65,9 +77,53 @@
 				</div>
 			</div>
 		</div>
+		<div class="recordModal modal">
+			<div class="recordBox box">
+				<h1>&bull;<span></span>抽奖记录<span></span>&bull;</h1>
+				<div class="recordContent">
+					<div class="missRecord displayNone">
+						<img src="../imgs/nothing.jpg" alt="" />	
+						<p>您当前没有任何抽奖记录</p>
+					</div>
+					<div class="prizeRecord ">
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<!-- <div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div>
+						<div class="flexBox">
+							<p>很遗憾您没有中奖，下次中奖的概率会更高哦~</p>
+							<span>2017.12.21</span>
+						</div> -->
+					</div>
+				</div>
+				<div class="rulesImg">
+					<img id="close" src="http://f.appstore.zshiliu.com/clubberimg/h5active/close.png" alt="" />
+				</div>
+			</div>
+		</div>
 		<div class="prizeModal">
 			<div class="prizeBox">
-				<img src="http://f.appstore.zshiliu.com/clubberimg/h5active/prize.png" alt="" />
+				<img src="../imgs/prize.png" alt="" />
 			</div>
 			<div class="prizeInfo">
 				<p class="info_one">恭喜您</p>
@@ -75,8 +131,14 @@
 				<p class="info_three"><span class="bonus">5000</span></p>
 			</div>
 			<div class="prizeBtn">
-				<img class="returnBtn" src="http://f.appstore.zshiliu.com/clubberimg/h5active/btn-bg.png">
-				<p class="btnInfo btnGet">立即领取</p>
+				<div class="btnDraw">
+					<img class="returnBtn" src="http://f.appstore.zshiliu.com/clubberimg/h5active/btn-bg.png">
+					<p class="btnInfo btnGet">立即领取</p>
+				</div>
+				<div class="btnShare" >
+					<img  class="shareBtn" src="../imgs/prizebtn.png">
+					<p id="shareGame" class="shareInfo btnGet">分享</p>
+				</div>
 				<p class="prizeMs">现金奖励将与次日返还至个人收益的<br />劳务费中，请注意查收</p>
 			</div>
 		</div>
@@ -95,13 +157,61 @@
 		</div>
 		<div class="mask"></div>
 		<div class="maskTwo"></div>
+		<div class="maskThree"></div>
 		<div class="message">
 			<div class="message-box">	
 				<p></p>
 			</div>
+		</div>
+		<div class="shareModal">
+			<div class="shareTxt">分享游戏到</div>
+			<div class="shareBox">
+				<dl>
+					<dt>
+						<img src="../imgs/qq.png" alt="" />
+					</dt>
+					<dd>QQ好友</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="../imgs/alipay.png" alt="" />
+					</dt>
+					<dd>支付宝</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="../imgs/dingding.png" alt="" />
+					</dt>
+					<dd>钉钉</dd>
+				</dl>
+			</div>
+			<div class="shareBox">
+				<dl>
+					<dt>
+						<img src="../imgs/yixin.png" alt="" />
+					</dt>
+					<dd>易信</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="../imgs/yixinq.png" alt="" />
+					</dt>
+					<dd>易信朋友圈</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="../imgs/weibo.png" alt="" />
+					</dt>
+					<dd>微博</dd>
+				</dl>
+			</div>
+			<div class="shareEnd">取消</div>
+				
+			
 		</div>
 	</body>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.rotate.min.js"></script>
 	<script src="../js/turntable.js"></script>
 </html>
+

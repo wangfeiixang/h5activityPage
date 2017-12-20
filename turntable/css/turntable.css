@@ -8,8 +8,24 @@ html,body{
     width: 100%;
     height: 6.4rem;
     position: relative;
-    background: url('http://f.appstore.zshiliu.com/clubberimg/h5active/bg.jpg') no-repeat top center;
+    background: url('../imgs/bg.jpg') no-repeat top center;
     background-size: 100% 100%;
+}
+.leftTop {
+	float: left;
+	margin-top: .18rem;
+}
+.leftTop > img {
+	display: block;
+	width: .7rem;
+	height: .26rem;
+	cursor: pointer;
+}
+.centertop{
+	float: left;
+	margin-top: .33rem;
+	margin-left: .25rem;
+	color: #ffff00;
 }
 .rightTop {
 	float: right;
@@ -89,14 +105,14 @@ html,body{
     position: absolute;
     left: 1.42rem;
     top: 2.98rem;
-    z-index: 999;
+    z-index: 200;
     opacity: .8;
 }
 
 
-/*抽奖说明--弹框*/
+/*抽奖说明--弹框  +  抽奖记录--弹框*/
 
-.rulesModal {
+.modal {
 	display: none;
 	width: 100%;
 	width: 100vw;
@@ -109,14 +125,15 @@ html,body{
 	left: 0;
 	z-index: 1000;
 }
-.rulesModal:after {
+.modal:after {
 	display: inline-block;
 	content: '';
 	width: 0;
 	height: 100%;
 	vertical-align: middle;
 }
-.rulesBox{
+
+.box{
 	width: 333px;
 	font-size: .12rem;
 	background: #ff5141;
@@ -155,6 +172,84 @@ html,body{
 	/*margin-top: .013rem;*/
 }
 .rbContent > .flexBox > p {
+	flex: 1;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 8px;  
+    height: 16px;  
+    background-color: #ff5141;  
+}  
+   
+/*定义滚动条轨道 内阴影+圆角*/  
+/*::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #ff5141;  
+}  */
+   
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+   /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/  
+    background-color:rgba(0,0,0,.1);  
+}  
+.recordContent > .prizeRecord{
+	width: 89%;
+	height: 178px;
+	overflow-y: auto; 
+	margin: .2rem;
+	float: left;
+}
+.recordContent  > .missRecord {
+	width: 100%;
+	height: 178px;
+	text-align: center;
+	
+}
+.missRecord > img {
+	display:inline-block ;  
+	width: 80px;
+	height:80px;
+	margin-top: 30px;
+}
+.missRecord > p {
+	margin-top: 20px;
+}
+.recordBox > h1 {
+	text-align: center;
+	color: #fff;
+	margin-bottom: .1rem;
+	margin-top: .2rem;
+}
+.recordBox > h1 > span {
+	display:inline-block;
+	width:.1rem;
+}
+.prizeRecord > .flexBox {
+	display: flex;
+	margin-bottom: .1rem;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+	line-height: 20px;
+	
+}
+
+.prizeRecord >.flexBox > span {
+	/*flex: 0 .2rem;*/
+	flex: 0 .8rem;
+	/*display: inline-block;
+	vertical-align: bottom;*/
+	/*margin-top: .013rem;*/
+	/*margin-left: .1rem;*/
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center;    
+}
+.prizeRecord > .flexBox > p {
 	flex: 1;
 }
 .rulesImg {
@@ -222,13 +317,13 @@ html,body{
 	text-align: center;
 }
 
-.prizeBtn > img {
+.prizeBtn > .btnDraw > .returnBtn {
 	width: 1.40rem;
 	position: absolute;
 	top: 1.90rem;
 	left:1.09rem;
 }
-.prizeBtn > .btnInfo {
+.prizeBtn > .btnDraw  > .btnInfo {
 	font-size: .15rem;
 	font-weight: bold;
 	color: #f03838;
@@ -236,12 +331,37 @@ html,body{
 	top: 1.96rem;
 	left:1.47rem;
 }
+.prizeBtn > .btnShare {
+	width: 146px;
+	height: 39px;
+	position: absolute;
+	top: 2.35rem;
+	left: 1.1rem;
+	cursor: pointer;
+}
+.prizeBtn > .btnShare > .shareBtn {
+	width: 1.40rem;
+
+}
+.prizeBtn > .btnShare  > .shareInfo {
+	width: 1.40rem;
+	height: 100%;
+	font-size: .15rem;
+	font-weight: bold;
+	color: #ffffff;
+	position: absolute;
+	top: 0px;
+	left:0px;
+	text-align: center;
+	line-height: 35px;
+	z-index: 999;
+}
 .prizeBtn > .prizeMs {
 	font-size: .1rem;
 	font-weight: bold;
 	color: #fff;
 	position: absolute;
-	top: 2.34rem;
+	top: 2.77rem;
 	left: 1rem; 
 	text-align: center;
 	/* z-index: 999; */
@@ -302,11 +422,11 @@ html,body{
 }
 
 /*遮罩层显示*/
-.mask,.maskTwo{
+.mask,.maskTwo,.maskThree{
 	width: 100%;
 	height: 100%;
 	background:rgba(0,0,0,0.6);
-	z-index: 100;
+	z-index: 300;
 	position: fixed;
 	left: 0;
 	top:0;
@@ -346,6 +466,87 @@ html,body{
 	margin: auto;
 }
 
+/*中奖名单*/
+#prize-list{
+	width: 2rem;
+    position: absolute;
+	top: 1.35rem;
+	font-size: .12rem;
+	left: .8rem;
+	text-align: center;
+	overflow: hidden;
+	/* background: #bdb4b4; */
+	opacity: .8;
+	border-radius: 10px;
+}
 
+#prize-list ul{
+	width: 100%;
+	height: 20px;
+	position: relative;
 
+}
 
+#prize-list ul li{
+	width: 100%;
+	height: 20px;
+	opacity: 0;
+	color: #fff;
+	position: absolute;
+	left:0;
+	top:20px;
+	
+}
+
+#prize-list ul li.active{
+	opacity: 1;
+	z-index:100;
+	top:0px;
+	
+}
+/*分享--弹框*/
+.shareModal {
+	display: none;
+	width: 100%;
+	height: 263px;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	left: 0;
+	background: #FFFFFF;
+}
+.shareModal > .shareTxt {
+	font-size: 14px;
+	color: #999999;
+	text-align: center;
+	margin: 20px auto; 
+}
+.shareModal > .shareBox {
+	width: 100%;
+	height: 72px;
+	display: flex;
+}
+.shareModal > .shareBox > dl {
+	flex: 1;
+	text-align: center;
+	cursor: pointer;
+}
+.shareModal > .shareBox > dl > dt > img {
+	width: 34px;
+	margin-bottom: 6px;
+}
+.shareModal > .shareBox > dl > dd {
+	font-size: 12px;
+	color: #333333;
+}
+.shareModal > .shareEnd {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+	background: #F9F9F9;
+	margin-top: 9px;
+	cursor: pointer;
+}

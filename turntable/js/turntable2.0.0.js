@@ -173,6 +173,7 @@ var turntable ={
                     } else if( data.luckyDrawResult=="queryResult" ){
                         clearTimeout(timer);
                         // console.log('正在处理延时器问题',timer)
+                        // setTimeout(function(){
                             var drawType = data.drawType;//定义中几等奖
                             drawType = parseInt( drawType.slice(5) );
                             // console.log( '中几等奖'+drawType )
@@ -186,6 +187,8 @@ var turntable ={
                                 that.rotateFn(that.prizeArr,3000,drawType);
                                 // console.log( '旋转进行中',that.prizeArr,drawType ) 
                             }
+
+                        // },0)
                         
                     }
 
@@ -214,23 +217,20 @@ var turntable ={
             $('.mask').show();
             $(".prizeModal").show().find('.win').html(this.type).parent().parent().find('.bonus').html(this.winPrice);
             document.onclick = function(e){
+                // console.log(e.target.id)
                 if ( $('.prizeModal').css('display')=='block' ) {
-                    // console.log( '用户已经中奖关闭弹窗',$('.missModal').css('display') )
+                    // console.log( '用户已经中奖关闭弹窗' )
                     that.inform()
                 } 
-               $(".prizeModal").hide();
-               $('.mask').hide();
-                // console.log(e.target)
 
-                if ( e.target.id==="shareGame" ) {
-                    console.log('这是分享游戏')
-                    // $('.mask').hide();
-                    $(".shareModal").show();
-                    $('.maskThree').show();
-                } else {
-                    console.log('这不是分享游戏')
-                }
-                
+                $(".prizeModal").hide();
+                $('.mask').hide();
+
+                if (e.target.id==="share") {
+                    console.log('这是分享')
+                    $('.mask').show();
+                    $('.share-box').show();
+                } 
             }
             
         } else {
@@ -371,24 +371,6 @@ $("#rule").click(function(e){
     
 })
 
-//点击显示抽奖记录
-
-$("#record").click(function(e){
-    $('.recordModal').show();
-    $('.maskTwo').show();
-    e.stopPropagation()
-    // console.log(  $('.maskTwo').css('display') )
-    if (  $('.maskTwo').css('display')=="block" ) {
-        $(document).click(function(){
-            $('.recordModal').hide();
-            $('.maskTwo').hide();
-        })
-    } 
-    
-})
-
-
-
 
 //中奖队列名单
 var prize ={
@@ -401,7 +383,6 @@ var prize ={
     init:function(){
         var that = this;
         this.timer = setInterval(function(){
-            // return;
             that.scrollNum++;
             that.getPrize();
             // console.log('这是发送数据',that.scrollNum)
@@ -418,17 +399,16 @@ var prize ={
         } else {
             this.index++;
         }
-
         // console.log( $(this.ali)[this.index],this.index );
-
-        $( $(this.ali)[this.index] ).addClass("active").animate({ top:"-25px"},1000,"linear").siblings("li").removeClass("active").css({ top:"25px",opacity:"0"});
-
-        if ( this.index === this.ali.length-1 ) {
-            $( $(this.ali)[0] ).css("opacity","1").animate({ top:"0px"},1000,"linear");
-        } else {
-            $( $(this.ali)[this.index+1] ).css("opacity","1").animate({ top:"0px"},1000,"linear");
-        }
-
+    
+        $( $(this.ali)[this.index] ).addClass("active").animate({ top:"-20px"},1000,"linear").siblings("li").removeClass("active").animate({ top:"0px"},function(){
+            // console.log( index+1 )
+            if ( that.index+1 == that.ali.length ) {
+                $( $(that.ali)[0] ).addClass("active");
+            } else {
+                $( $(that.ali)[that.index+1] ).addClass("active"); 
+            }
+        });
     },
     getPrize:function(){//获取实时所有人中奖记录
         this.ajax("./draw/01.json");//非第一次获取数据
@@ -472,30 +452,7 @@ var prize ={
 
 }
 
-prize.init();
-
-//分享游戏
-var shareGame = {
-    init:function(){
-        this.stopShare();
-        this.share();
-    },
-    stopShare:function(){//取消分享
-        $(".shareEnd").click(function(){
-            $('.maskThree').hide();
-            $(".shareModal").hide();
-        })
-    },
-    share:function(){
-        $(".shareBox dl").click(function(){
-            $('.maskThree').hide();
-            $(".shareModal").hide();
-        })
-        
-    }
-}
-
-shareGame.init();
+prize.init()
 
 
 
