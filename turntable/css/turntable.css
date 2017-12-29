@@ -1,9 +1,12 @@
 /*抽奖页面-- css*/
-html,body{
-	width: 100%;
-	overflow: hidden;
-	background: #fcd839;
+
+html,
+body {
+    width: 100%;
+    overflow: hidden;
+    background: #fcd839;
 }
+
 .content {
     width: 100%;
     height: 6.4rem;
@@ -11,100 +14,119 @@ html,body{
     background: url('../imgs/bg.jpg') no-repeat top center;
     background-size: 100% 100%;
 }
+
+.topBox {
+    display: flex;
+}
+
 .leftTop {
-	float: left;
-	margin-top: .18rem;
+    float: left;
+    margin-top: .18rem;
+    flex: 1;
 }
-.leftTop > img {
-	display: block;
-	width: .7rem;
-	height: .26rem;
-	cursor: pointer;
+
+.leftTop>img {
+    display: block;
+    width: .7rem;
+    height: .26rem;
+    cursor: pointer;
 }
-.centertop{
-	float: left;
-	margin-top: .33rem;
-	margin-left: .25rem;
-	color: #ffff00;
+
+.centertop {
+    flex: 3;
+    float: left;
+    width: 100%;
+    height: .2rem;
+    margin-top: .33rem;
+    text-align: center;
+    color: #ffff00;
 }
+
 .rightTop {
-	float: right;
-	margin-top: .18rem;
+    flex: 1;
+    margin-top: .18rem;
+    text-align: right;
 }
-.rightTop > img {
-	display: block;
-	width: .7rem;
-	height: .26rem;
-	cursor: pointer;
+
+.rightTop>img {
+    display: inline-block;
+    width: .7rem;
+    height: .26rem;
+    cursor: pointer;
 }
+
 .outer {
-	display: block;
-	width:3.16rem;
-	position: absolute;
-	top:1.78rem;
-	left:.2rem;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 1.78rem;
+    left: 0;
+    text-align: center;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
-.outer > img{
-	width: 100%;
+.outer>img {
+    width: 3.16rem;
 }
 
-/* #rotateImg{
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	-o-transform: translateZ(0);
-	transform: translateZ(0);
-} */
-
-
-.inner > img {
-	display: block;
-	width:1.71rem;
-	position: absolute;
-	top:1.77rem;
-	left:.92rem;
-}
-.inner > p {
-	font-weight: bold;
-	font-size: 0.15rem;
-	color: #fff;
-	position: absolute;
-	top:1.81rem;
-	left:1.53rem;
-}
-.bottomTxt > p {
-	font-size: 0.12rem;
-	color: #262626;
-	position: absolute;
-	bottom: 1.04rem;
-	left: .87rem;
+.inner {
+    width: 100%;
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    text-align: center;
 }
 
-.bottomTxt  p img{
-	width: .13rem;
-	margin: 0 2px;
-	vertical-align: -2px;
+.inner>img {
+    display: inline-block;
+    width: 1.71rem;
 }
 
-#bamboo{
-	display: inline-block;
-	vertical-align: 0px; 
+.inner>p {
+    font-weight: bold;
+    font-size: 0.15rem;
+    color: #fff;
+    position: absolute;
+    top: .04rem;
+    left: 45%;
 }
 
-#rotate{
+.bottomTxt {
+    margin-left: 4%;
+    width: 100%;
+    position: absolute;
+    bottom: 1.04rem;
+    left: 0;
+    text-align: center;
+}
+
+.bottomTxt>p {
+    font-size: 0.12rem;
+    color: #262626;
+}
+
+.bottomTxt p img {
+    width: .13rem;
+    margin: 0 2px;
+    vertical-align: -2px;
+}
+
+#bamboo {
+    display: inline-block;
+    vertical-align: 0px;
+}
+
+#rotate {
     width: .7rem;
     height: .7rem;
     border-radius: 50%;
-    /* background: gold; */
     position: absolute;
-    left: 1.42rem;
-    top: 2.98rem;
+    left: 40%;
+    top: 1.2rem;
     z-index: 200;
     opacity: .8;
 }
@@ -113,440 +135,470 @@ html,body{
 /*抽奖说明--弹框  +  抽奖记录--弹框*/
 
 .modal {
-	display: none;
-	width: 100%;
-	width: 100vw;
-	height: 100%;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, .6);
-	text-align: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-}
-.modal:after {
-	display: inline-block;
-	content: '';
-	width: 0;
-	height: 100%;
-	vertical-align: middle;
+    display: none;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
 }
 
-.box{
-	width: 333px;
-	font-size: .12rem;
-	background: #ff5141;
-	color: #fff;
-	border-radius: .2rem;
-	display: inline-block;
-	text-align: left;
-	vertical-align: middle;
-	position: relative;
+.modal:after {
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.box {
+    width: 3.33rem;
+    font-size: .12rem;
+    background: #ff5141;
+    color: #fff;
+    border-radius: .2rem;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    position: relative;
 }
 
 .rbContent {
-	margin: .2rem;
-	float: left;
+    margin: .2rem;
+    float: left;
+}
+
+.rbContent>h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: .2rem;
+}
+
+.rbContent>h1>span {
+    display: inline-block;
+    width: .1rem;
+}
+
+.rbContent>.flexBox {
+    display: flex;
+    margin-bottom: .1rem;
+}
+
+.rbContent>.flexBox>span {
+    flex: 0 .2rem;
+}
+
+.rbContent>.flexBox>p {
+    flex: 1;
 }
 
 
-.rbContent > h1 {
-	text-align: center;
-	color: #fff;
-	margin-bottom: .2rem;
-}
-.rbContent > h1 > span {
-	display:inline-block;
-	width:.1rem;
-}
-.rbContent > .flexBox {
-	display: flex;
-	margin-bottom: .1rem;
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 16px;
+    background-color: #ff5141;
 }
 
-.rbContent > .flexBox > span {
-	flex: 0 .2rem;
-	/*display: inline-block;
-	vertical-align: bottom;*/
-	/*margin-top: .013rem;*/
-}
-.rbContent > .flexBox > p {
-	flex: 1;
-}
 
-/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
-::-webkit-scrollbar  
-{  
-    width: 8px;  
-    height: 16px;  
-    background-color: #ff5141;  
-}  
-   
-/*定义滚动条轨道 内阴影+圆角*/  
+/*定义滚动条轨道 内阴影+圆角*/
+
+
 /*::-webkit-scrollbar-track  
 {  
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
     border-radius: 10px;  
     background-color: #ff5141;  
 }  */
-   
-/*定义滑块 内阴影+圆角*/  
-::-webkit-scrollbar-thumb  
-{  
-    border-radius: 10px;  
-   /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/  
-    background-color:rgba(0,0,0,.1);  
-}  
-.recordContent > .prizeRecord{
-	width: 89%;
-	height: 178px;
-	overflow-y: auto; 
-	margin: .2rem;
-	float: left;
-}
-.recordContent  > .missRecord {
-	width: 100%;
-	height: 178px;
-	text-align: center;
-	
-}
-.missRecord > img {
-	display:inline-block ;  
-	width: 80px;
-	height:80px;
-	margin-top: 30px;
-}
-.missRecord > p {
-	margin-top: 20px;
-}
-.recordBox > h1 {
-	text-align: center;
-	color: #fff;
-	margin-bottom: .1rem;
-	margin-top: .2rem;
-}
-.recordBox > h1 > span {
-	display:inline-block;
-	width:.1rem;
-}
-.prizeRecord > .flexBox {
-	display: flex;
-	margin-bottom: .1rem;
-	border-bottom: 1px solid rgba(255,255,255,.2);
-	line-height: 20px;
-	
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);*/
+    background-color: rgba(0, 0, 0, .1);
 }
 
-.prizeRecord >.flexBox > span {
-	/*flex: 0 .2rem;*/
-	flex: 0 .8rem;
-	/*display: inline-block;
-	vertical-align: bottom;*/
-	/*margin-top: .013rem;*/
-	/*margin-left: .1rem;*/
-	display: table-cell;
+.recordContent>.prizeRecord {
+    width: 89%;
+    height: 1.8rem;
+    overflow-y: auto;
+    vertical-align: 0;
+    margin: .2rem;
+    float: left;
+    display: none;
+}
+
+.recordContent>.missRecord {
+    width: 100%;
+    height: 1.78rem;
+    text-align: center;
+}
+
+.missRecord>img {
+    display: inline-block;
+    width: .8rem;
+    height: .8rem;
+    margin-top: .3rem;
+}
+
+.missRecord>p {
+    margin-top: .2rem;
+}
+
+.recordBox>h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: .1rem;
+    margin-top: .2rem;
+}
+
+.recordBox>h1>span {
+    display: inline-block;
+    width: .1rem;
     vertical-align: middle;
-    text-align: center;    
 }
-.prizeRecord > .flexBox > p {
-	flex: 1;
+
+.prizeRecord>.flexBox {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    height: .45rem;
+    line-height: .45rem;
 }
-.rulesImg {
+
+.prizeRecord>.flexBoxOne {
+    display: flex;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+	height: .45rem;
+}
+
+.prizeRecord>div>span {
+    flex: 0 .8rem;
 	text-align: center;
+    line-height: .45rem;
 }
-.rulesImg > img {
-	width: .54rem;
-	margin-bottom: .14rem;
+
+.prizeRecord>.flexBoxOne>span {
+	line-height: .34rem;
 }
+
+.prizeRecord>div>p {
+    flex: 1;
+}
+
+.rulesImg {
+    text-align: center;
+}
+
+.rulesImg>img {
+    width: .54rem;
+    margin-bottom: .14rem;
+}
+
 .displayNone {
-	display: none;
+    display: none;
 }
+
 
 /*中奖--弹框*/
+
 .prizeModal {
-	/*width:3.3rem;
-	height: 100%;*/
-	font-size: 0.12rem;
-	z-index: 1000;
-	position: absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	right: 0;
-	margin: auto;
-	margin-top: 36%;
-	display: none;
+    font-size: 0.12rem;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 36%;
+    display: none;
 }
+
 .prizeBox {
-	text-align: center;
-	/*position: relative;*/
-}
-.prizeBox > img {
-	width: 3.3rem;
-}
-.prizeInfo > .info_one {
-	font-size: .2rem;
-	color: #ea2a2d;
-	font-weight: bold;
-	position: absolute;
-	top:.59rem;
-	left:1.47rem;
-}
-.prizeInfo > .info_two {
-	font-size: .15rem;
-	color: #ea2a2d;
-	font-weight: bold;
-	position: absolute;
-	top: .85rem;
-	left:1.4rem;
-}
-.prizeInfo > .info_two > span {
-	display: inline-block;
-	vertical-align: top;
+    text-align: center;
 }
 
-.prizeInfo > .info_three {
-	width: 55%;
-	font-size: .3rem;
-	color: #ebb36e;
-	font-weight: bold;
-	position: absolute;
-	top: 1.22rem;
-    left: .84rem;
-	text-align: center;
+.prizeBox>img {
+    width: 3.3rem;
 }
 
-.prizeBtn > .btnDraw > .returnBtn {
-	width: 1.40rem;
-	position: absolute;
-	top: 1.90rem;
-	left:1.09rem;
+.prizeInfo {
+    width: 100%;
+    height: .98rem;
+    text-align: center;
+    position: absolute;
+    top: .59rem;
+    left: 0;
 }
-.prizeBtn > .btnDraw  > .btnInfo {
-	font-size: .15rem;
-	font-weight: bold;
-	color: #f03838;
-	position: absolute;
-	top: 1.96rem;
-	left:1.47rem;
-}
-.prizeBtn > .btnShare {
-	width: 146px;
-	height: 39px;
-	position: absolute;
-	top: 2.35rem;
-	left: 1.1rem;
-	cursor: pointer;
-}
-.prizeBtn > .btnShare > .shareBtn {
-	width: 1.40rem;
 
+.prizeInfo>.info_one {
+    width: 100%;
+    font-size: .2rem;
+    color: #ea2a2d;
+    font-weight: bold;
+    position: absolute;
+    top: .03rem;
 }
-.prizeBtn > .btnShare  > .shareInfo {
-	width: 1.40rem;
-	height: 100%;
-	font-size: .15rem;
-	font-weight: bold;
-	color: #ffffff;
-	position: absolute;
-	top: 0px;
-	left:0px;
-	text-align: center;
-	line-height: 35px;
-	z-index: 999;
+
+.prizeInfo>.info_two {
+    width: 100%;
+    font-size: .15rem;
+    color: #ea2a2d;
+    font-weight: bold;
+    position: absolute;
+    top: .25rem;
 }
-.prizeBtn > .prizeMs {
-	font-size: .1rem;
-	font-weight: bold;
-	color: #fff;
-	position: absolute;
-	top: 2.77rem;
-	left: 1rem; 
-	text-align: center;
-	/* z-index: 999; */
+
+.prizeInfo>.info_two>span {
+    display: inline-block;
+    vertical-align: 0;
 }
+
+.prizeInfo>.info_three {
+    width: 100%;
+    font-size: .3rem;
+    color: #ebb36e;
+    font-weight: bold;
+    position: absolute;
+    top: .54rem;
+}
+
+.prizeBtn>.btnDraw {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1.90rem;
+    left: 0;
+}
+
+.prizeBtn>.btnDraw>.returnBtn {
+    width: 1.40rem;
+}
+
+.prizeBtn>.btnDraw>.btnInfo {
+    font-size: .15rem;
+    font-weight: bold;
+    color: #f03838;
+    position: absolute;
+    top: .06rem;
+    left: 42%;
+}
+
+.prizeBtn>.btnShare {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 2.35rem;
+    left: 0;
+}
+
+.prizeBtn>.btnShare>.shareBtn {
+    width: 1.40rem;
+}
+
+.prizeBtn>.btnShare>div {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+}
+
+.prizeBtn>.btnShare>div>div {
+    width: 1.40rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.prizeBtn>.btnShare>div>div>.shareInfo {
+    font-size: .15rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: .35rem;
+    z-index: 999;
+}
+
+.prizeBtn>.prizeMs {
+    width: 100%;
+    font-size: .1rem;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 2.77rem;
+    left: 0;
+    text-align: center;
+}
+
 
 /*未中奖--弹框*/
+
 .missModal {
-	font-size: 0.12rem;
-	z-index: 1000;
-	position: absolute;
-	left:0;
-	top:0;
-	bottom:0;
-	right: 0;
-	margin: auto;
-	margin-top: 45%;
-	display: none;
+    font-size: 0.12rem;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 45%;
+    display: none;
 }
 
 .missBox {
-	text-align: center;
-	position: relative;
+    text-align: center;
+    position: relative;
 }
 
-.missBox > img {
-	width: 3.3rem;
+.missBox>img {
+    width: 3.3rem;
 }
 
-.missInfo > .info_one {
-	font-size: .2rem;
-	color: #ea2a2d;
-	font-weight: bold;
-	position: absolute;
-	top:.59rem;
-	left:1.47rem;
+.missInfo {
+    width: 100%;
+    position: absolute;
+    top: .59rem;
+    left: 0;
+    text-align: center;
 }
-.missInfo > .info_two {
-	font-size:.15rem;
-	color: #ea2a2d;
-	font-weight: bold;
-	position: absolute;
-	top: .89rem;
-	left:1.40rem;
+
+.missInfo>.info_one {
+    font-size: .2rem;
+    color: #ea2a2d;
+    font-weight: bold;
 }
-.missBtn > img {
-	width: 1.4rem;
-	position: absolute;
-	top: 1.60rem;
-	left:1.09rem;
+
+.missInfo>.info_two {
+    font-size: .15rem;
+    color: #ea2a2d;
+    font-weight: bold;
 }
-.missBtn > .btnInfo {
-	font-size: .15rem;
-	font-weight: bold;
-	color: #f03838;
-	position: absolute;
-	top: 1.65rem;
-	left:1.63rem;
+
+.missBtn {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 1.60rem;
+    left: 0;
 }
+
+.missBtn>img {
+    width: 1.4rem;
+}
+
+.missBtn>.btnInfo {
+    font-size: .15rem;
+    font-weight: bold;
+    color: #f03838;
+    position: absolute;
+    top: .06rem;
+    left: 46%;
+}
+
 
 /*遮罩层显示*/
-.mask,.maskTwo,.maskThree{
-	width: 100%;
-	height: 100%;
-	background:rgba(0,0,0,0.6);
-	z-index: 300;
-	position: fixed;
-	left: 0;
-	top:0;
-	display: none;
+
+.mask,
+.maskTwo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 300;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.mask {
+    z-index: 600;
 }
 
 
 /*错误提示或者网络延时提示*/
-.message{
-	width:100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top:0;
-	color:#fff;
-	z-index: 1001;
-	display: none;
+
+.message {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    color: #fff;
+    z-index: 1001;
+    display: none;
 }
 
-.message-box{
-	width: 100%;
-	height: 100%;
-	position: relative;
+.message-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.message p{
-	width: 100%;
-	height: 30px;
-	font-size: .16rem;
-	text-align: center;
-	line-height: 30px;
-	position: absolute;
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	margin: auto;
+.message p {
+    width: 100%;
+    height: .3rem;
+    font-size: .16rem;
+    text-align: center;
+    line-height: .3rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
+
 
 /*中奖名单*/
-#prize-list{
-	width: 2rem;
+
+#prize-list {
+    width: 100%;
     position: absolute;
-	top: 1.35rem;
-	font-size: .12rem;
-	left: .8rem;
-	text-align: center;
-	overflow: hidden;
-	/* background: #bdb4b4; */
-	opacity: .8;
-	border-radius: 10px;
+    top: 1.35rem;
+    font-size: .12rem;
+    text-align: center;
+    overflow: hidden;
+    opacity: .8;
+    border-radius: .1rem;
 }
 
-#prize-list ul{
-	width: 100%;
-	height: 20px;
-	position: relative;
-
+#prize-list ul {
+    width: 100%;
+    height: .2rem;
+    position: relative;
 }
 
-#prize-list ul li{
-	width: 100%;
-	height: 20px;
-	opacity: 0;
-	color: #fff;
-	position: absolute;
-	left:0;
-	top:20px;
-	
+#prize-list ul li {
+    width: 100%;
+    height: .2rem;
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: .2rem;
 }
 
-#prize-list ul li.active{
-	opacity: 1;
-	z-index:100;
-	top:0px;
-	
+#prize-list ul li span {
+    vertical-align: 0;
+    display: inline-block;
+    margin: 0px 4px;
 }
-/*分享--弹框*/
-.shareModal {
-	display: none;
-	width: 100%;
-	height: 263px;
-	position: fixed;
-	z-index: 999;
-	bottom: 0;
-	left: 0;
-	background: #FFFFFF;
+
+#prize-list ul li span:nth-child(2) {
+    color: #ffec1c;
 }
-.shareModal > .shareTxt {
-	font-size: 14px;
-	color: #999999;
-	text-align: center;
-	margin: 20px auto; 
-}
-.shareModal > .shareBox {
-	width: 100%;
-	height: 72px;
-	display: flex;
-}
-.shareModal > .shareBox > dl {
-	flex: 1;
-	text-align: center;
-	cursor: pointer;
-}
-.shareModal > .shareBox > dl > dt > img {
-	width: 34px;
-	margin-bottom: 6px;
-}
-.shareModal > .shareBox > dl > dd {
-	font-size: 12px;
-	color: #333333;
-}
-.shareModal > .shareEnd {
-	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-	font-size: 14px;
-	color: #333333;
-	background: #F9F9F9;
-	margin-top: 9px;
-	cursor: pointer;
+
+#prize-list ul li.active {
+    opacity: 1;
+    z-index: 100;
+    top: 0px;
 }

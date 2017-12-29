@@ -3,5 +3,52 @@
   "resultMsg":"错误描述",
   "totalBamboos":"66",
   "luckyDrawTimes":"6",
-  "luckyDrawAlready":"Y"
+  "luckyDrawAlready":"N",
+  "beginTime": "2018/12/31",
+  "endTime": "2019/01/13",
+  "drawNum": "三",
+  "list": [
+        {
+            "phoneNum": "135xxxx6789",
+            "drawPrice": 100
+        },
+        {
+            "phoneNum": "173xxxx1234",
+            "drawPrice": 200
+        },
+        {
+          "phoneNum": "135xxxx6789",
+          "drawPrice": 100
+        },
+        {
+            "phoneNum": "173xxxx1234",
+            "drawPrice": 200
+        },
+        {
+            "phoneNum": "156xxxx1239",
+            "drawPrice": 20
+        },
+        {
+            "phoneNum": "123xxxx1236",
+            "drawPrice": 201
+        },
+        {
+            "phoneNum": "145xxxx1223",
+            "drawPrice": 10
+        },
+        {
+            "phoneNum": "234xxxx9999",
+            "drawPrice": 1000
+        },
+        {
+            "phoneNum": "813xxxx1233",
+            "drawPrice": 2100
+        },
+        {
+            "phoneNum": "223xxxx1333",
+            "drawPrice": 5000
+        }
+  ]
+
 }
+

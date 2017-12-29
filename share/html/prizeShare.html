@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="apple-mobile-web-app-title" content="Ratchet">
+	    <title>中奖分享</title>
+	    <link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/prizeShare.css">
+		<script src="../js/base.js"></script>
+		
+		
+	</head>
+	<body>
+		<div class="content">
+			<div class="contentTxt">
+				<div>
+					<p><span id="userId">哈喽凯蒂</span>说：</p>
+					<p>我在紫石榴《百万大奖》活动中抽中了大红包，获得金额<span class="txtColor">100</span>元!</p>
+				</div>
+			</div>
+			<div class="invitationCode">
+				<p>【 TA的推荐码：<span  id="referralCode">113DSA</span> 】</p>
+			</div>
+			<div class="contentBtn" id="button">
+				<p>
+					<a href="javascript:void(0);" title="Android下载" data-src="http://f.appstore.zshiliu.com/zslapp/appstore-release-v1.0_31001.apk"  class="androidlink">
+						<img src="../imgs/sharebtn.png" alt="" />
+					</a>
+				</p>
+                <p><a href="javascript:void(0);" title="iPhone下载" data-src="http://f.appstore.zshiliu.com/zslapp/appstore-release-v1.0_31001.apk" class="ioslink"></a></p>
+			</div>
+			<!--微信提示浮层-->
+            <div class="share_bg j_share_bg" style="display:none;position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; animation: opacityIn 1s ease 0.2s both; z-index: 9998; background: rgba(0, 0, 0, 0.6);">
+                <p class="share_icon" style="clear:both; padding:10px; text-align:right;height:100%;background-position: right top; -webkit-animation:rotateUp 1s .8s ease both;z-index:9999;">
+                    < img id="j_float_nav" src="" alt="" width="100%">
+                </p >
+            </div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/shareGame.js"></script>
+</html>

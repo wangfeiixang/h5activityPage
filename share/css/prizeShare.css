@@ -1,0 +1,63 @@
+/*中奖分享-- css*/
+html,body{
+	width: 100%;
+	overflow: hidden;
+}
+.content {
+    width: 100%;
+    height: 6.4rem;
+    position: relative;
+    background: url('../imgs/sharebg.jpg') no-repeat top center;
+    background-size: 100% 100%;
+}
+/*抽奖内容*/
+.content > .contentTxt {
+	width: 83%;
+	height: .63rem;
+	background: rgba(0,0,0,.15);
+	position: absolute;
+	top: .64rem;
+	left: .32rem;
+	border-radius: .1rem;
+	color: #FFFFFF;
+	font-size: .12rem;
+}
+.content > .contentTxt > div {
+	margin: .07rem .16rem;
+}
+.content > .contentTxt > div  > p > span {
+	display: inline-block;
+	vertical-align: top;
+}
+.content > .contentTxt > div  > p > .txtColor {
+	color: #FFFF00;
+	vertical-align: 0;
+	display: inline-block;
+	margin: 0px 3px;
+}
+/*推荐码*/
+.content > .invitationCode {
+	width: 1.53rem;
+	position: absolute;
+	top: 1.37rem;
+	left: 1.05rem; 
+	color: #FFFFFF;
+	font-size: .12rem;
+	text-align: center;
+}
+.content > .invitationCode > p {
+	
+}
+.content > .invitationCode > p > span{
+	display: inline-block;
+	vertical-align: top;
+}
+/*抽奖按钮*/
+.content >.contentBtn {
+	position: absolute;
+	bottom: .69rem;
+	left: .98rem;
+}
+.content > .contentBtn > p > a > img{
+	width: 1.66rem;
+}

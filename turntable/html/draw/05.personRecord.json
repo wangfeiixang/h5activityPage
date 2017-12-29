@@ -1,0 +1,49 @@
+
+{
+    "status": 0,
+    "data": [
+        
+            {
+                "drawTime": "2017.12.31",
+                "drawType":"draw_0",
+                "drawNum": "三"
+            },
+            {
+                "drawTime":"2017.10.31",
+                "drawType":"draw_7",
+                "drawNum": "一"
+            },
+            {
+                "drawTime": "2017.12.31",
+                "drawType":"draw_8",
+                "drawNum": "三"
+            },
+            {
+                "drawTime":"2017.10.31",
+                "drawType":"draw_4",
+                "drawNum": "一"
+            },
+            {
+                "drawTime": "2017.12.31",
+                "drawType": "draw_2",
+                "drawNum": "三"
+            },
+            {
+                "drawTime":"2017.10.31",
+                "drawType": "draw_1",
+                "drawNum": "一"
+            },
+            {
+                "drawTime":"2017.10.31",
+                "drawType": "draw_9",
+                "drawNum": "一"
+            }
+        ]
+    
+    
+    
+}
+
+
+
+

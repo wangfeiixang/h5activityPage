@@ -1,0 +1,33 @@
+
+
+{
+    "status": 0,
+    "data":  [
+            {
+                "phoneNum": "13xxxxsec1",
+                "drawPrice": 100
+            },
+            {
+                "phoneNum": "17xxxxsec2",
+                "drawPrice": 200
+            },
+            {
+                "phoneNum": "156xxxsec3",
+                "drawPrice": 20
+            },
+            {
+                "phoneNum": "123xxxsec4",
+                "drawPrice": 201
+            },
+            {
+                "phoneNum": "173xxxsec5",
+                "drawPrice": 200
+            }
+            
+        ],
+	
+    "msg": "用户未登录,请登录/系统异常，获取中奖列表失败"
+}
+
+
+

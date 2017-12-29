@@ -3,5 +3,11 @@
   "resultMsg":"查询结果错误!!!",
   "luckyDrawResult":"queryResult",
   "interval":"5",
-  "drawType":"draw_0"
+  "drawType":"draw_3",
+  "share": {
+    "shareTitle":"我要分享百万大奖活动",
+    "shareDesc":"分享描述，我在紫石榴获取了5000元大奖，大家快来参加把",
+    "iconUrl":"http://zishiliu.com/abc.jpg",
+    "shareUrl":"http://zishiliu.com/share?flag=123klj34@$!"
+  }
 }
