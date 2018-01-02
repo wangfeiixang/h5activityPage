@@ -532,7 +532,6 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    color: #fff;
     z-index: 1001;
     display: none;
 }
@@ -544,11 +543,14 @@ body {
 }
 
 .message p {
-    width: 100%;
-    height: .3rem;
+    width: 2.5rem;
+    height: .35rem;
+    background: #fff;
+    color: black;
+    border-radius: 8px;
     font-size: .16rem;
     text-align: center;
-    line-height: .3rem;
+    line-height: .35rem;
     position: absolute;
     left: 0;
     top: 0;

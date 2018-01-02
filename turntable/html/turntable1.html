@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	    <meta name="apple-mobile-web-app-title" content="Ratchet">
+	    <title>转盘抽奖</title>
+	    <link rel="stylesheet" type="text/css" href="../css/base.css">
+		<link rel="stylesheet" type="text/css" href="../css/turntable.css">
+		<script src="../js/base.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="rightTop">
+				<img id="rule" src="../imgs/rules.png"/>
+			</div>
+			<div class="turntable">
+				<div id="outer-cont">
+					<div id="outer" class="outer">
+						<img id="rotateImg" src="../imgs/turntable.png" />
+					</div>
+				</div>
+				<div id="inner-cont">
+					<div id="inner" class="inner">
+						<div id="rotate"></div>
+						<img class="btnImg" src="../imgs/btn-no.png" />
+						<p>第一期</p>
+					</div>
+				</div>
+			</div>
+			<div class="bottomTxt">
+				<p>10个<img src="../imgs/bamboo.jpg" alt="">可以抽一次，当前持有<img src="../imgs/bamboo.jpg" alt=""><span id="bamboo"></span>个</p>
+			</div>
+		</div>
+		<div class="rulesModal">
+			<div class="rulesBox">
+				<div class="rbContent">
+					<h1>&bull;<span></span>抽奖说明<span></span>&bull;</h1>
+					<div class="h_six">
+						<span>1.</span>
+						<p>12月11日进行第一期抽奖。12月21日进行第二期抽奖。12月31日进行第三期抽奖。抽奖功能只有当天开放，过期后会关闭。</p>
+					</div>
+					<div class="h_second">
+						<span>2.</span>
+						<p>每一期抽奖活动的奖金额度不同，暂定第一期奖金总额20万元，第二期奖金总额30万元，第三期奖金总额50万元。也就是说，从第一期到第三期，中奖的人数会越来越多，中奖的几率会越来越大！</p>
+					</div>
+					<div class="h_six">
+						<span>3.</span>
+						<p>所有用户只要满足签到条件都可以参与抽奖。抽奖需要消耗自己持有的竹签道具，10个竹签抽一次。每一期抽奖要求不变。</p>
+					</div>
+					<div class="h_four">
+						<span>4.</span>
+						<p>竹签可以通过每日签到获得，每天只能获得一根竹签。</p>
+					</div>
+					<div class="h_six_o">
+						<span>5.</span>
+						<p>关于抽奖活动具体规则，届时请参考活动通知，抽奖活动事宜可能发生的变化以及最终解释权，归紫石榴官方所有。</p>
+					</div>
+				</div>
+				<div class="rulesImg">
+					<img id="close" src="../imgs/close.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="prizeModal">
+			<div class="prizeBox">
+				<img src="../imgs/prize.png" alt="" />
+			</div>
+			<div class="prizeInfo">
+				<p class="info_one">恭喜您</p>
+				<p class="info_two">抽中<span class="win">特等奖</span></p>
+				<p class="info_three"><span class="bonus">5000</span></p>
+			</div>
+			<div class="prizeBtn">
+				<img class="returnBtn" src="../imgs/btn-bg.png">
+				<p class="btnInfo btnGet">立即领取</p>
+				<p class="prizeMs">现金奖励将返还至个人收益中，请注意查收</p>
+			</div>
+		</div>
+		<div class="missModal ">
+			<div class="missBox">
+				<img src="../imgs/miss.png" alt="" />
+			</div>
+			<div class="missInfo">
+				<p class="info_one">很抱歉</p>
+				<p class="info_two">本次未中奖</p>
+			</div>
+			<div class="missBtn">
+				<img class="returnBtn" src="../imgs/btn-bg.png">
+				<p class="btnInfo btnClose">关闭</p>
+			</div>
+		</div>
+		<div class="mask"></div>
+		<div class="maskTwo"></div>
+		<div class="message">
+			<div class="message-box">	
+				<p>请求数据错误!!!</p>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/jquery.rotate.min.js"></script>
+	<script src="../js/turntable.js"></script>
+</html>

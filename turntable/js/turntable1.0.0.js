@@ -552,7 +552,7 @@ var prize ={
 
                 if ( data.status == 0 ) {//字幕滚动请求数据成功
                     var list = data.data;
-                    console.log( list )
+                    console.log( list );
                     list.forEach(function(ele,i){
                         // console.log( ele )
                         that.html += "<li>恭喜<span>"+ele.phoneNum+"</span>抽中红包奖金<span>"+ele.drawPrice+"</span>元</li>";

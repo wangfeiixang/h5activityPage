@@ -519,7 +519,7 @@ var prize ={
             that.scrollNum++;
             that.getPrize();
             // console.log('这是发送数据',that.pollingTime,that.scrollNum)
-        },12000)
+        },27000)
 
         this.ajax("./draw/04.record.json",1)//这是第一次请求数据
         this.setAuto();

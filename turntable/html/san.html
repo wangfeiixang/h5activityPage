@@ -1,0 +1,27 @@
+ 
+<html>
+<head>
+<script type="text/javascript">
+    function test() {
+        // 调用父页面方法 
+        window.parent.ff("hello");
+    }
+
+    function test2() {
+        var span = window.parent.document.getElementById("span");
+        alert(span);
+    }
+    
+    function ff(msg) {
+        alert(msg);
+    }
+</script>
+</head>
+<body>
+    <div id="div" style="width: 100px; height: 100px; background-color: yellow"></div>
+    <a href="#" onclick="test()">点击调用父页面方法</a>
+    <br>
+    <a href="#" onclick="test2()">点击获取父页面元素</a>
+    <br>
+</body>
+</html>

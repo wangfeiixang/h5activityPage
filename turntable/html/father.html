@@ -1,0 +1,33 @@
+ 
+<html>
+<head>
+<script type="text/javascript">
+    function ff(msg) {
+        alert(msg);
+    }
+
+    function test() {
+        // 只能通过iframe名称获取子页面，不能通过id  
+        var div = window.frames["b"].document.getElementById("div");
+        alert(div);
+    }
+
+    function test2() {
+        // 调用子页面方法  
+        window.frames["b"].ff("hi san");
+    }
+    
+</script>
+</head>
+<body>
+    <span id="span">FFFFFFFFF</span>
+    <iframe id="a" name="b" width="200px" height="200px" src="san.html">
+        <p>您的浏览器不支持 iframe 标签。</p>
+    </iframe>
+    <span>HHHHHHHH</span>
+    <br>
+    <a href="#" onclick="test()">点击获取子页面元素</a>
+    <br>
+    <a href="#" onclick="test2()">点击调用子页面方法</a>
+</body>
+</html>

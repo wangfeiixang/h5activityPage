@@ -22,6 +22,26 @@
             {
                 "phoneNum": "173xxxsec5",
                 "drawPrice": 200
+            },
+            {
+                "phoneNum": "13xxxxsec1",
+                "drawPrice": 100
+            },
+            {
+                "phoneNum": "17xxxxsec2",
+                "drawPrice": 200
+            },
+            {
+                "phoneNum": "156xxxsec3",
+                "drawPrice": 20
+            },
+            {
+                "phoneNum": "123xxxsec4",
+                "drawPrice": 201
+            },
+            {
+                "phoneNum": "173xxxsec5",
+                "drawPrice": 200
             }
             
         ],

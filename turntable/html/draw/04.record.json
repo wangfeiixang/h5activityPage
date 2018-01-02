@@ -22,6 +22,26 @@
             {
                 "phoneNum": "555xxxx1235",
                 "drawPrice": 200
+            },
+            {
+                "phoneNum": "111xxxx6781",
+                "drawPrice": 100
+            },
+            {
+                "phoneNum": "222xxxx1232",
+                "drawPrice": 200
+            },
+            {
+                "phoneNum": "333xxxx1233",
+                "drawPrice": 200
+            },
+            {
+                "phoneNum": "444xxxx1234",
+                "drawPrice": 200
+            },
+            {
+                "phoneNum": "555xxxx1235",
+                "drawPrice": 200
             }
         ],
 	
